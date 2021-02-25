@@ -1,5 +1,6 @@
-
+import showInnerContent from './showInnerContent';
 function updateSimpleProductLayout (){
+    showInnerContent(false);
     var imageColumn = document.getElementById('product-image-column');
     var infoColumn = document.getElementById('product-info-column');
     var image = imageColumn.childNodes[0].childNodes[2].childNodes[1];
@@ -11,5 +12,6 @@ function updateSimpleProductLayout (){
         infoColumn.classList.remove('col-sm-8');
         infoColumn.classList.add('u-center-block');
     }
+    showInnerContent(true);
 }
 export default updateSimpleProductLayout;
