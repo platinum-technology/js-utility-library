@@ -9,7 +9,7 @@ function updateEntityDropDownLayout(){
     var updatedSidebarColumn = document.createElement("div");
     updatedSidebarColumn.classList.add('col-sm-4');
     updatedSidebarColumn.classList.add('updated-sidebar')
-    for(var i = 0; i &lt; gridImages.length; i++){
+    for(var i = 0; i < gridImages.length; i++){
         var gridImg = gridImages[i].childNodes[0];
 
         if(gridImg.src.includes('nopictureicon.gif')){
@@ -35,7 +35,7 @@ function updateEntityDropDownLayout(){
 
     if(upsellItems.length > 0){
         var upsellProducts = document.querySelector('.upsell-products');
-        for(var y = 0; y &lt; upsellItems.length; y++){
+        for(var y = 0; y < upsellItems.length; y++){
             upsellItems[y].classList.remove('col-sm-3');
             upsellItems[y].classList.remove('col-sm-12');
         }

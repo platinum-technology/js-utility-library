@@ -17,26 +17,26 @@
 		root["$"] = factory();
 })(self, function() {
 return /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/addDOMContent.js":
-/*!******************************!*\
-  !*** ./src/addDOMContent.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./src/_aspdnsf/entityDropDown.js":
+/*!****************************************!*\
+  !*** ./src/_aspdnsf/entityDropDown.js ***!
+  \****************************************/
+/***/ (() => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction addDOMContent(content) {\n  var node = document.createElement(\"h1\");\n  node.innerText = content;\n  document.body.appendChild(node);\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addDOMContent);\n\n//# sourceURL=webpack://$/./src/addDOMContent.js?");
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: /Volumes/LaCie/11-Sites/2021-PTG/js-utility-library/src/_aspdnsf/entityDropDown.js: Unexpected token, expected \\\")\\\" (12:43)\\n\\n\\u001b[0m \\u001b[90m 10 |\\u001b[39m     updatedSidebarColumn\\u001b[33m.\\u001b[39mclassList\\u001b[33m.\\u001b[39madd(\\u001b[32m'col-sm-4'\\u001b[39m)\\u001b[33m;\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 11 |\\u001b[39m     updatedSidebarColumn\\u001b[33m.\\u001b[39mclassList\\u001b[33m.\\u001b[39madd(\\u001b[32m'updated-sidebar'\\u001b[39m)\\u001b[0m\\n\\u001b[0m\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 12 |\\u001b[39m     \\u001b[36mfor\\u001b[39m(\\u001b[36mvar\\u001b[39m i \\u001b[33m=\\u001b[39m \\u001b[35m0\\u001b[39m\\u001b[33m;\\u001b[39m i \\u001b[33m&\\u001b[39mlt\\u001b[33m;\\u001b[39m gridImages\\u001b[33m.\\u001b[39mlength\\u001b[33m;\\u001b[39m i\\u001b[33m++\\u001b[39m){\\u001b[0m\\n\\u001b[0m \\u001b[90m    |\\u001b[39m                                            \\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 13 |\\u001b[39m         \\u001b[36mvar\\u001b[39m gridImg \\u001b[33m=\\u001b[39m gridImages[i]\\u001b[33m.\\u001b[39mchildNodes[\\u001b[35m0\\u001b[39m]\\u001b[33m;\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 14 |\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 15 |\\u001b[39m         \\u001b[36mif\\u001b[39m(gridImg\\u001b[33m.\\u001b[39msrc\\u001b[33m.\\u001b[39mincludes(\\u001b[32m'nopictureicon.gif'\\u001b[39m)){\\u001b[0m\\n    at Parser._raise (/Volumes/LaCie/11-Sites/2021-PTG/js-utility-library/node_modules/@babel/parser/lib/index.js:776:17)\\n    at Parser.raiseWithData (/Volumes/LaCie/11-Sites/2021-PTG/js-utility-library/node_modules/@babel/parser/lib/index.js:769:17)\\n    at Parser.raise (/Volumes/LaCie/11-Sites/2021-PTG/js-utility-library/node_modules/@babel/parser/lib/index.js:737:17)\\n    at Parser.unexpected (/Volumes/LaCie/11-Sites/2021-PTG/js-utility-library/node_modules/@babel/parser/lib/index.js:9253:16)\\n    at Parser.expect (/Volumes/LaCie/11-Sites/2021-PTG/js-utility-library/node_modules/@babel/parser/lib/index.js:9239:28)\\n    at Parser.parseFor (/Volumes/LaCie/11-Sites/2021-PTG/js-utility-library/node_modules/@babel/parser/lib/index.js:12467:10)\\n    at Parser.parseForStatement (/Volumes/LaCie/11-Sites/2021-PTG/js-utility-library/node_modules/@babel/parser/lib/index.js:12170:19)\\n    at Parser.parseStatementContent (/Volumes/LaCie/11-Sites/2021-PTG/js-utility-library/node_modules/@babel/parser/lib/index.js:11871:21)\\n    at Parser.parseStatement (/Volumes/LaCie/11-Sites/2021-PTG/js-utility-library/node_modules/@babel/parser/lib/index.js:11846:17)\\n    at Parser.parseBlockOrModuleBlockBody (/Volumes/LaCie/11-Sites/2021-PTG/js-utility-library/node_modules/@babel/parser/lib/index.js:12428:25)\");\n\n//# sourceURL=webpack://$/./src/_aspdnsf/entityDropDown.js?");
 
 /***/ }),
 
-/***/ "./src/capital.js":
-/*!************************!*\
-  !*** ./src/capital.js ***!
-  \************************/
+/***/ "./src/_aspdnsf/simpleProduct.js":
+/*!***************************************!*\
+  !*** ./src/_aspdnsf/simpleProduct.js ***!
+  \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction capital(string) {\n  var capitalizedString = string.substring(0, 1).toUpperCase() + string.substring(1);\n  return capitalizedString;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (capital);\n\n//# sourceURL=webpack://$/./src/capital.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction updateSimpleLayout() {\n  var imageColumn = document.getElementById('product-image-column');\n  var infoColumn = document.getElementById('product-info-column');\n  var image = imageColumn.childNodes[0].childNodes[2].childNodes[1]; // hide image column if there's no image. \n\n  if (image.src.includes('nopicture')) {\n    imageColumn.classList.add('u-hide');\n    infoColumn.classList.remove('col-sm-8');\n    infoColumn.classList.add('u-center-block');\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (updateSimpleLayout);\n\n//# sourceURL=webpack://$/./src/_aspdnsf/simpleProduct.js?");
 
 /***/ }),
 
@@ -46,7 +46,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"capital\": () => (/* reexport safe */ _capital__WEBPACK_IMPORTED_MODULE_0__.default),\n/* harmony export */   \"addDOMContent\": () => (/* reexport safe */ _addDOMContent__WEBPACK_IMPORTED_MODULE_1__.default)\n/* harmony export */ });\n/* harmony import */ var _capital__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./capital */ \"./src/capital.js\");\n/* harmony import */ var _addDOMContent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addDOMContent */ \"./src/addDOMContent.js\");\n\n\n\n\n//# sourceURL=webpack://$/./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"parallax\": () => (/* reexport safe */ _parallax_parllax__WEBPACK_IMPORTED_MODULE_2__.default),\n/* harmony export */   \"updateEntityDropDown\": () => (/* reexport default from dynamic */ _aspdnsf_entityDropDown__WEBPACK_IMPORTED_MODULE_0___default.a),\n/* harmony export */   \"updateSimpleLayout\": () => (/* reexport safe */ _aspdnsf_simpleProduct__WEBPACK_IMPORTED_MODULE_1__.default)\n/* harmony export */ });\n/* harmony import */ var _aspdnsf_entityDropDown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_aspdnsf/entityDropDown */ \"./src/_aspdnsf/entityDropDown.js\");\n/* harmony import */ var _aspdnsf_entityDropDown__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_aspdnsf_entityDropDown__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _aspdnsf_simpleProduct__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_aspdnsf/simpleProduct */ \"./src/_aspdnsf/simpleProduct.js\");\n/* harmony import */ var _parallax_parllax__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./parallax/parllax */ \"./src/parallax/parllax.js\");\n\n\n\n\n\n//# sourceURL=webpack://$/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/parallax/parllax.js":
+/*!*********************************!*\
+  !*** ./src/parallax/parllax.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction parallax() {\n  window.addEventListener('scroll', function (e) {\n    var parallaxCons = document.querySelectorAll('.parallax-group');\n    var parallaxEls = document.querySelectorAll('.parallax');\n    var yScrolledDist = window.scrollY;\n\n    if (parallaxEls.length > 0) {\n      parallaxEls.forEach(function (cur, idx) {\n        var container = cur.parentNode;\n        var containerHeight = container.offsetHeight;\n        var spaceToTop = container.getBoundingClientRect().top;\n\n        if (spaceToTop <= 0 && spaceToTop > -containerHeight) {\n          var sectionScrolledDistance;\n          var rateY = spaceToTop * cur.dataset.yscroll; // console.log('RATE Y:', rateY);\n\n          switch (cur.dataset.direction) {\n            case 'vertical':\n              cur.style.transform = \"translate3d(0px, \".concat(rateY, \"px, 0px)\");\n              break;\n\n            case 'horizontal':\n              var rateX = spaceToTop * cur.dataset.xscroll;\n              cur.style.transform = \"translate3d(\".concat(rateX, \"px, \").concat(rateY, \"px, 0px)\");\n              break;\n          }\n        } else {\n          cur.style.transform = \"translate3d(0px, 0px, 0px)\";\n        }\n      });\n    }\n  });\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (parallax);\n\n//# sourceURL=webpack://$/./src/parallax/parllax.js?");
 
 /***/ })
 
@@ -76,6 +88,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
