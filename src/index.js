@@ -1,4 +1,9 @@
-import capital from "./capital"
-import addDOMContent from "./addDOMContent"
+import updateEntityDropDown from './_aspdnsf/entityDropDown';
+import updateSimpleLayout from './_aspdnsf/simpleProduct';
+import parallax from './parallax/parllax';
 
-export { capital, addDOMContent }
+export { 
+    parallax, 
+    updateEntityDropDown, 
+    updateSimpleLayout 
+}
