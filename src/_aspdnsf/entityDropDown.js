@@ -2,6 +2,7 @@ function updateEntityDropDownLayout(){
     var productContainer = document.getElementById('product-container');
     var imageColumn = document.getElementById('product-image-column');
     var image = imageColumn.childNodes[0].childNodes[2].childNodes[1];
+
     var descriptionColumn = document.getElementById('product-description-column');
     console.log(imageColumn);
     var gridImages = Array.from(document.getElementsByClassName('grid-item-image-wrap'));
@@ -25,13 +26,16 @@ function updateEntityDropDownLayout(){
     var upsellItems = Array.from(document.getElementsByClassName('upsell-item'));
     // Updates:
     descriptionColumn.style.position="relative";
-    imageColumn.childNodes[0].style.position = "absolute";
-    imageColumn.childNodes[0].style.right = "35px";
-    imageColumn.childNodes[0].style.width = "250px";
-    imageColumn.childNodes[0].style.border = "1px #ccc solid";
-    imageColumn.childNodes[0].style.borderRadius = "5px";
-    imageColumn.childNodes[0].style.padding = "15px";
-    descriptionColumn.prepend(imageColumn.childNodes[0]);
+    if(!image.src.includes('nopicture')){
+        imageColumn.childNodes[0].style.position = "absolute";
+        imageColumn.childNodes[0].style.right = "35px";
+        imageColumn.childNodes[0].style.width = "250px";
+        imageColumn.childNodes[0].style.border = "1px #ccc solid";
+        imageColumn.childNodes[0].style.borderRadius = "5px";
+        imageColumn.childNodes[0].style.padding = "15px";
+        descriptionColumn.prepend(imageColumn.childNodes[0]);
+    }
+   
 
     if(upsellItems.length > 0){
         var upsellProducts = document.querySelector('.upsell-products');

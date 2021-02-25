@@ -1,4 +1,3 @@
-
 function updateSimpleLayout (){
     var imageColumn = document.getElementById('product-image-column');
     var infoColumn = document.getElementById('product-info-column');
