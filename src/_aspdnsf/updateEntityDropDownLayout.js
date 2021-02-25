@@ -1,23 +1,18 @@
+import showInnerContent from './showInnerContent';
+import arrangePricing from './arrangePricing';
 function updateEntityDropDownLayout(){
+    showInnerContent(false);
     let productContainer = document.getElementById('product-container');
     let imageColumn = document.getElementById('product-image-column');
     let image = imageColumn.childNodes[0].childNodes[2].childNodes[1];
 
-    let descriptionColumn = document.getElementById('product-description-column');
-    let variantInformation = descriptionColumn.childNodes[1].childNodes[5];
-    let variantPricing = variantInformation.childNodes[1].childNodes[1];
-    let options = descriptionColumn.childNodes[1].childNodes[3];
-    let gridImages = Array.from(document.getElementsByClassName('grid-item-image-wrap'));
-  
     // new html column 
     let updatedSidebarColumn = document.createElement("div");
     updatedSidebarColumn.classList.add('col-sm-4');
     updatedSidebarColumn.classList.add('updated-sidebar')
     
-    descriptionColumn.style.position="relative";
-    // changes the order of the elements than from original default
-    descriptionColumn.prepend(options);
-    descriptionColumn.prepend(variantPricing);
+    arrangePricing();
+
     for(let i = 0; i < gridImages.length; i++){
         let gridImg = gridImages[i].childNodes[0];
 
@@ -61,7 +56,7 @@ function updateEntityDropDownLayout(){
         
     productContainer.append(updatedSidebarColumn);
     imageColumn.classList.add('u-hide');
-
+    showInnerContent(true);
 }
 export default updateEntityDropDownLayout;
   
