@@ -1,12 +1,12 @@
 // imports. 
 import test from './general';
-import entityDropDown from './_aspdnsf/entityDropDown';
-import simpleProduct from './_aspdnsf/simpleProduct';
+import updateEntityDropDownLayout from './_aspdnsf/updateEntityDropDownLayout';
+import updateSimpleProductLayout from './_aspdnsf/updateSimpleProductLayout';
 import parallax from './parallax/parllax';
 
 export {
     test, 
-    simpleProduct, 
-    entityDropDown,
+    updateSimpleProductLayout,
+    updateEntityDropDownLayout,
     parallax
 }

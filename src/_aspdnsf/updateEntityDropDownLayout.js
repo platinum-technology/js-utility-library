@@ -1,31 +1,39 @@
 function updateEntityDropDownLayout(){
-    var productContainer = document.getElementById('product-container');
-    var imageColumn = document.getElementById('product-image-column');
-    var image = imageColumn.childNodes[0].childNodes[2].childNodes[1];
+    let productContainer = document.getElementById('product-container');
+    let imageColumn = document.getElementById('product-image-column');
+    let image = imageColumn.childNodes[0].childNodes[2].childNodes[1];
 
-    var descriptionColumn = document.getElementById('product-description-column');
-    console.log(imageColumn);
-    var gridImages = Array.from(document.getElementsByClassName('grid-item-image-wrap'));
+    let descriptionColumn = document.getElementById('product-description-column');
+    let variantInformation = descriptionColumn.childNodes[1].childNodes[5];
+    let variantPricing = variantInformation.childNodes[1].childNodes[1];
+    let options = descriptionColumn.childNodes[1].childNodes[3];
+    let gridImages = Array.from(document.getElementsByClassName('grid-item-image-wrap'));
+  
     // new html column 
-    var updatedSidebarColumn = document.createElement("div");
+    let updatedSidebarColumn = document.createElement("div");
     updatedSidebarColumn.classList.add('col-sm-4');
     updatedSidebarColumn.classList.add('updated-sidebar')
-    for(var i = 0; i < gridImages.length; i++){
-        var gridImg = gridImages[i].childNodes[0];
+    
+    descriptionColumn.style.position="relative";
+    // changes the order of the elements than from original default
+    descriptionColumn.prepend(options);
+    descriptionColumn.prepend(variantPricing);
+    for(let i = 0; i < gridImages.length; i++){
+        let gridImg = gridImages[i].childNodes[0];
 
         if(gridImg.src.includes('nopictureicon.gif')){
             gridImg.style.display = 'none';
         }
     }
     // related products
-    var relatedProducts = Array.from(document.getElementsByClassName('related-products'));
-    console.log(relatedProducts);
-    var relatedInnerContainer = relatedProducts[0].childNodes[7].childNodes[1].childNodes[1].childNodes[1];
-    var productGridItem = relatedProducts[0].childNodes[7].childNodes[1].childNodes[1];
+    let relatedProducts = Array.from(document.getElementsByClassName('related-products'));
+    let relatedInnerContainer = relatedProducts[0].childNodes[7].childNodes[1].childNodes[1].childNodes[1];
+    let productGridItem = relatedProducts[0].childNodes[7].childNodes[1].childNodes[1];
     // upsell products
-    var upsellItems = Array.from(document.getElementsByClassName('upsell-item'));
+    let upsellItems = Array.from(document.getElementsByClassName('upsell-item'));
     // Updates:
     descriptionColumn.style.position="relative";
+    
     if(!image.src.includes('nopicture')){
         imageColumn.childNodes[0].style.position = "absolute";
         imageColumn.childNodes[0].style.right = "35px";
@@ -36,17 +44,15 @@ function updateEntityDropDownLayout(){
         descriptionColumn.prepend(imageColumn.childNodes[0]);
     }
    
-
     if(upsellItems.length > 0){
-        var upsellProducts = document.querySelector('.upsell-products');
-        for(var y = 0; y < upsellItems.length; y++){
+        let upsellProducts = document.querySelector('.upsell-products');
+        for(let y = 0; y < upsellItems.length; y++){
             upsellItems[y].classList.remove('col-sm-3');
             upsellItems[y].classList.remove('col-sm-12');
         }
         updatedSidebarColumn.append(upsellProducts);
     }
     if(relatedProducts.length > 0){
-        console.log('REALTED PRODUCTS');
         productGridItem.classList.remove('col-sm-3');
         relatedInnerContainer.style.minHeight = 'unset';
         relatedInnerContainer.classList.add('u-left');

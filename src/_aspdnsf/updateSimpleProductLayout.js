@@ -1,4 +1,4 @@
-function updateSimpleLayout (){
+function updateSimpleProductLayout (){
     var imageColumn = document.getElementById('product-image-column');
     var infoColumn = document.getElementById('product-info-column');
     var image = imageColumn.childNodes[0].childNodes[2].childNodes[1];
@@ -9,4 +9,4 @@ function updateSimpleLayout (){
         infoColumn.classList.add('u-center-block');
     }
 }
-export default updateSimpleLayout;
+export default updateSimpleProductLayout;
