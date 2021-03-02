@@ -1,64 +1,71 @@
 import showInnerContent from './showInnerContent';
-import arrangePricing from './arrangePricing';
+
 function updateEntityDropDownLayout(){
     showInnerContent(false);
     let productContainer = document.getElementById('product-container');
     let imageColumn = document.getElementById('product-image-column');
     let image = imageColumn.childNodes[0].childNodes[2].childNodes[1];
+    let imageGallery = imageColumn.childNodes[0];
     let gridImages = Array.from(document.getElementsByClassName('grid-item-image-wrap'));
-    // new html column 
+   
+    // new html columns 
     let updatedSidebarColumn = document.createElement("div");
+    let descriptionColumnInnerLeft = document.createElement("div");
+    let descriptionColumnInnerRight = document.createElement("div");
     // arrange column vars
     let descriptionColumn = document.getElementById('product-description-column');
-    // let variantInformation = descriptionColumn.childNodes[1].childNodes[5];
-    // let variantPricing = variantInformation.childNodes[1].childNodes[1];
-    
+    let productInfo = descriptionColumn.childNodes[1];
+    let variantInfo = descriptionColumn.childNodes[1].childNodes[5];
+    let stockIndicator = descriptionColumn.childNodes[1].childNodes[1]
 
-    
     let options = descriptionColumn.childNodes[1].childNodes[3];
 
 
     descriptionColumn.style.position="relative";
     // changes the order of the elements than from original default
-    descriptionColumn.prepend(options);
-    // let variantPricingArr = Array.from(document.getElementsByClassName('variant-info'));
-    // variantPricingArr.forEach((cur,idx)=>{
-    //     descriptionColumn.prepend(cur);
-    // });
+   
 
-
-
-
- 
-  
+    // Update New Html Elements
     updatedSidebarColumn.classList.add('col-sm-4');
     updatedSidebarColumn.classList.add('updated-sidebar');
+    descriptionColumnInnerLeft.style.float = "left";
+    descriptionColumnInnerLeft.style.width = "25%";
+    descriptionColumnInnerLeft.style.marginRight = "15px";
+    descriptionColumnInnerRight.style.float = "left";
+    descriptionColumnInnerRight.style.width = "70%";
+    descriptionColumnInnerRight.style.position = "realative";
+    descriptionColumnInnerRight.style.padding = "50px 15px 15px 15px";
 
-    descriptionColumn.style.position="relative";
+    
     // changes the order of the elements than from original default
-    console.log(image)
-    if(typeof image !== 'undefined'){
-  
-        if(gridImages.length > 0){
-            for(let i = 0; i < gridImages.length; i++){
-                let gridImg = gridImages[i].childNodes[0];
-        
-                if(gridImg.src.includes('nopictureicon.gif')){
-                    gridImg.style.display = 'none';
-                }
+    if(gridImages.length > 0){
+     
+        for(let i = 0; i < gridImages.length; i++){
+            let gridImg = gridImages[i].childNodes[0];
+    
+            if(gridImg.src.includes('nopictureicon.gif')){
+                gridImg.style.display = 'none';
             }
         }
     }
-  
 
     // related products
     let relatedProducts = Array.from(document.getElementsByClassName('related-products'));
     let relatedInnerContainer = relatedProducts[0].childNodes[7].childNodes[1].childNodes[1].childNodes[1];
     let productGridItem = relatedProducts[0].childNodes[7].childNodes[1].childNodes[1];
+
     // upsell products
     let upsellItems = Array.from(document.getElementsByClassName('upsell-item'));
+    
     // Updates:
     descriptionColumn.style.position="relative";
+    // Create the new two column layout | Adds the right column and conteent
+    descriptionColumnInnerRight.prepend(options)
+    descriptionColumnInnerRight.append(stockIndicator)
+    descriptionColumnInnerRight.append(variantInfo);
+    descriptionColumnInnerRight.append(productInfo);
+    descriptionColumn.prepend(descriptionColumnInnerRight);
+   // Create the new two column layout | Adds the left column and conteent
     if(typeof image !== 'undefined'){
         if(!image.src.includes('nopicture')){
             imageColumn.childNodes[0].style.position = "absolute";
@@ -67,11 +74,20 @@ function updateEntityDropDownLayout(){
             imageColumn.childNodes[0].style.border = "1px #ccc solid";
             imageColumn.childNodes[0].style.borderRadius = "5px";
             imageColumn.childNodes[0].style.padding = "15px";
-            descriptionColumn.prepend(imageColumn.childNodes[0]);
+            // prepends the image if it is not blank
+            descriptionColumnInnerLeft.prepend(image);
+            descriptionColumn.prepend(descriptionColumnInnerLeft);
         }
     }
+    else{
+        // if there is an image gallery just move the whole container 
+        // this column includes the image / image gallery. 
+        descriptionColumnInnerLeft.prepend(imageGallery);
+        descriptionColumn.prepend(descriptionColumnInnerLeft);
+    }
 
-   
+
+    // Creates the updated sidebar column if applicable. 
     if(upsellItems.length > 0){
         let upsellProducts = document.querySelector('.upsell-products');
         for(let y = 0; y < upsellItems.length; y++){
