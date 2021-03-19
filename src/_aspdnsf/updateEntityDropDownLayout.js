@@ -18,8 +18,23 @@ function updateEntityDropDownLayout(){
     let variantInfo = descriptionColumn.childNodes[1].childNodes[5];
     let stockIndicator = descriptionColumn.childNodes[1].childNodes[1]
 
-    let options = descriptionColumn.childNodes[1].childNodes[3];
 
+      // hide image column if there's no image. 
+      if(image.src.includes('nopicture')){
+        imageColumn.classList.add('u-hide');
+   
+     }
+
+
+    let options = descriptionColumn.childNodes[1].childNodes[3];
+    let optionsSelect = options.childNodes[2].childNodes[0];
+    if(options && optionsSelect){
+      
+        let optionsSelectValue = optionsSelect.innerHTML;
+        if (!optionsSelectValue){
+             options.style.display = "none";
+         }
+     }
 
     descriptionColumn.style.position="relative";
     // changes the order of the elements than from original default
@@ -51,8 +66,7 @@ function updateEntityDropDownLayout(){
 
     // related products
     let relatedProducts = Array.from(document.getElementsByClassName('related-products'));
-    let relatedInnerContainer = relatedProducts[0].childNodes[7].childNodes[1].childNodes[1].childNodes[1];
-    let productGridItem = relatedProducts[0].childNodes[7].childNodes[1].childNodes[1];
+
 
     // upsell products
     let upsellItems = Array.from(document.getElementsByClassName('upsell-item'));
@@ -97,6 +111,8 @@ function updateEntityDropDownLayout(){
         updatedSidebarColumn.append(upsellProducts);
     }
     if(relatedProducts.length > 0){
+        let relatedInnerContainer = relatedProducts[0].childNodes[7].childNodes[1].childNodes[1].childNodes[1];
+        let productGridItem = relatedProducts[0].childNodes[7].childNodes[1].childNodes[1];
         productGridItem.classList.remove('col-sm-3');
         relatedInnerContainer.style.minHeight = 'unset';
         relatedInnerContainer.classList.add('u-left');
@@ -106,6 +122,10 @@ function updateEntityDropDownLayout(){
     productContainer.append(updatedSidebarColumn);
     imageColumn.classList.add('u-hide');
     showInnerContent(true);
+
+
+
+
 }
 export default updateEntityDropDownLayout;
   
