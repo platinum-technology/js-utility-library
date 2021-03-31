@@ -30,7 +30,7 @@ const includeCCGraphics = () => {
                 ccContainer.style.width = "120px";
                 mainContainer.childNodes[1].insertAdjacentHTML('afterEnd', ccContainer.outerHTML);
             }
-            // CC n Checkout page. 
+            // CC Checkout page. 
             else {
                 let paymentHeader = document.getElementsByClassName('payment-method')[0];
                 ccContainer.style.position = 'absolute';
