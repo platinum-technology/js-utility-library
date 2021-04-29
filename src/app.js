@@ -5,6 +5,7 @@ import includeCCGraphics from './_aspdnsf/includeCCgraphics';
 import showInnerContent from './_aspdnsf/showInnerContent';
 import setPageLayout from './_aspdnsf/setPageLayout';
 import parallax from './parallax/parllax';
+import {mobileMenu} from './_aspdnsf/mobileMenu';
 
 
 export {
@@ -13,5 +14,6 @@ export {
     updateSimpleProductLayout,
     updateEntityDropDownLayout,
     includeCCGraphics,
+    mobileMenu,
     parallax
 }
